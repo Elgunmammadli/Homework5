@@ -9,8 +9,8 @@ namespace Task1
             /*
                1) Verilmish metnde {a} simvolun sayi {b} simvolun sayinda nece defe coxdur?
              */
-
-            string sentence = "slm bb";
+            Console.Write("Metn daxil et: ");
+            string sentence = Convert.ToString(Console.ReadLine());
 
             int countA = 0;
             int countB = 0;
