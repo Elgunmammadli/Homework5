@@ -12,8 +12,8 @@ namespace Task4
 
             Console.Write("Metn daxil et: ");
             string sentence = Convert.ToString(Console.ReadLine());
-
-            int index = sentence.IndexOf('a');
+            char[] forA = { 'A', 'a' };
+            int index = sentence.IndexOfAny(forA,0);
 
             if (index % 2 == 0)
             {
