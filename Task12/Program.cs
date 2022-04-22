@@ -38,12 +38,12 @@ namespace Task12
                 if (!(intList[i] == indexIlk || intList[i] == indexSon))
                 {
                     temp = sentence.Remove(intList[i], 1);
-                    sentence = temp.Insert(intList[i], "`");
+                    sentence = temp.Insert(intList[i], "`#@;';';");
                 }
             }
 
-            sentence = sentence.Replace("`", "");// chox dusundum bele bir chare tapdim :) .hec kim '`' bu characteri ishletmez mence :)
-            
+            sentence = sentence.Replace("`#@;';';", "");// chox dusundum bele bir chare tapdim :) .'`#@;';';' bu characterler demek olar ki yanashi ishlenmez :)
+
             Console.WriteLine(sentence);
         }
     }
