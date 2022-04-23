@@ -16,13 +16,12 @@ namespace Task8
             char[] charA = { 'A', 'a' };
 
             int index = sentence.IndexOfAny(charA,0);
-            string newWord="";
-            for (int i = 0; i < 10; i++)
+            for (int i = index; i < index+9; i++)
             {
-                //newWord = string.Join("", sentence[index + 1]);
-                newWord = sentence[index + 1].ToString();
-                Console.Write(newWord);
+                sentence = sentence.Insert(i+1,sentence[i+1].ToString());
             }
+            Console.Write(sentence);
+
         }
     }
 }
