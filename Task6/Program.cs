@@ -12,10 +12,11 @@ namespace Task6
 
             Console.Write("Metn daxil et: ");
             string sentence = Convert.ToString(Console.ReadLine());
-            char[] forA = { 'A', 'a' };
+            char[] forA = { 'A', 'a' };//salam
 
-            int index1 = sentence.IndexOfAny(forA, 0);//3 for n
-            int index2 = (sentence.Length-1) - index1;
+            int index1 = sentence.IndexOfAny(forA, 0);
+            int index2 = sentence.LastIndexOfAny(forA, sentence.Length-1);
+            index2 = sentence.Length - index2 - 1;
             
             if (index1==index2)
             {
