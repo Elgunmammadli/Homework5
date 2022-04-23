@@ -53,23 +53,9 @@ namespace Task15
             if (stateSame==true && stateYanashiA==true && stateB==false)
             {
                 sentence = sentence.Replace("c", "");
-                string subIlk="", subSon="";
-                if (sentence.Length%2==0)
-                {
-                    subIlk = sentence.Substring(0, sentence.Length / 2);
-                    subSon = sentence.Substring(sentence.Length / 2, sentence.Length / 2);
-                    subSon = string.Join("", subSon.ToCharArray().Reverse());
-                }
-                else if (sentence.Length % 2 != 0)
-                {
-                    subIlk = sentence.Substring(0, sentence.Length / 2 + 1);
-                    subSon = sentence.Substring(sentence.Length / 2, sentence.Length / 2 +1 );
-                    subSon = string.Join("", subSon.ToCharArray().Reverse());
-
-                }
-                
-
-                if (subIlk==subSon)
+                string reverse = string.Join("", sentence.ToCharArray().Reverse());
+               
+                if (sentence== reverse)
                 {
                     Console.WriteLine("zerkalnidir");
                 }
