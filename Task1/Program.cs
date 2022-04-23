@@ -12,8 +12,8 @@ namespace Task1
             Console.Write("Metn daxil et: ");
             string sentence = Convert.ToString(Console.ReadLine());
 
-            int countA = 0;
-            int countB = 0;
+            double countA = 0;
+            double countB = 0;
 
             for (int i = 0; i < sentence.Length; i++)
             {
@@ -37,7 +37,7 @@ namespace Task1
                 return;
             }
             double qismet = countA / countB;
-            Console.WriteLine("a simvollarinin sayi ,b simvollarin sayindan {0} defe choxdur",qismet);
+            Console.WriteLine("a simvollarinin sayi ,b simvollarin sayindan {0} defe  choxdur", qismet);
         }
     }
 }
