@@ -14,10 +14,24 @@ namespace Task11
             Console.Write("Metn daxil et: ");
             string sentence = Convert.ToString(Console.ReadLine());
 
-            string newSen = sentence.Replace("a","ab");
-            string newSenn = newSen.Replace("b", "ba");
+            char a = 'a';
+            char b = 'b';
 
-            Console.WriteLine(newSenn);
+            for (int i = 0; i < sentence.Length; i++)
+            {
+                if (sentence[i]==a)
+                {
+                    sentence = sentence.Insert(i, b.ToString());
+                    i++;
+                }
+                else if (sentence[i] == b)
+                {
+                    sentence = sentence.Insert(i, a.ToString());
+                    i++;
+                }
+            }
+
+            Console.WriteLine(sentence);
 
 
 
