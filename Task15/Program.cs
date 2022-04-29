@@ -15,13 +15,11 @@ namespace Task15
               neticede alinan metn zerkalni olub olmadigini yoxla.
              */
 
-            string sentence = "daaczcaad";
-            string temp = sentence;
-
-            
+            Console.Write("Metn daxil et: ");
+            string sentence = Convert.ToString(Console.ReadLine());
 
             bool stateSame = false;
-            bool stateYanashiA = true;
+            bool stateYanashiA = false;
             bool stateB = false;
 
 
@@ -30,14 +28,12 @@ namespace Task15
                 stateSame = true;
             }
 
-
-            if (temp==sentence.Replace("aa","aa"))
+            for (int i = 0; i < sentence.Length-1; i++)
             {
-                stateYanashiA = true;
-            }
-            else
-            {
-                stateYanashiA = false;
+                if (sentence[i]=='a' && sentence[i]==sentence[i+1])
+                {
+                    stateYanashiA = true;
+                }
             }
 
             for (int i = 0; i < sentence.Length; i++)
